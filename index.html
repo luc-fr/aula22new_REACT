@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Aula React</title>
+</head>
+
+<body>
+
+    <main id="container"></main>
+
+
+    <!-- <script src="https://alexgeracaotech.github.io/lib/script.js"></script> -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <script type="text/babel">
+
+        const Title = <h1>Hello World!</h1>
+        const Paragraph = <p>Welcome to React course!</p>
+        const Button = <button>Send!</button>
+
+        function Card() {
+            return (
+                <div>
+                    <h1>Hello, React!</h1>
+                    <p>Welcome to React course!</p>
+                    <button>Start</button>
+                </div>
+            )
+        }
+
+
+        function InputText() {
+            return (
+                <div>
+                    <input type="text" placeholder="Usuário"></input>
+                </div>
+            )
+        }
+
+        function InputPass() {
+            return (
+                <div>
+                    <input type="password" placeholder="Senha"></input>
+                </div>
+            )
+        }
+
+
+        function InputBox() {
+            return (
+                <div>
+                    <input type="checkbox"></input>Mostrar Senha
+                </div>
+            )
+        }
+
+
+        function But() {
+            return (
+                <div>
+                    <style>
+                
+                    </style>
+                    <button>Entrar</button>
+                </div>
+            )
+        }
+
+
+        function TextOne() {
+            return (
+                <div>
+                    <p>Esqueceu a senha? Recupere <a href="">aqui</a>.</p>
+                </div>
+            )
+        }
+
+
+        function TextTwo() {
+            return (
+                <div>
+                    <p>Não possui cadastro? Cadastre-se <a href="">aqui</a>.</p>
+                </div>
+            )
+        }
+
+
+        const App = (
+            <>
+                <InputText></InputText>
+                <InputPass></InputPass>
+                <InputBox></InputBox>
+                <But></But>
+                <TextOne></TextOne>
+                <TextTwo></TextTwo>
+            </>
+        )
+
+
+        // const App = (
+        //     <>
+        //         {Title}
+        //         {Paragraph}
+        //         {Button}
+        //     </>
+        // )
+
+
+        // const App = (
+        //     <>
+        //         <h1>Hello World!</h1>
+        //         <p>Welcome to React course!</p>
+        //     </>
+        // )
+
+        const container = document.querySelector('#container')
+        const root = ReactDOM.createRoot(container)
+        root.render(App)
+        // container.innerHTML = '<h1>Hello React!</h1>'
+        // console.log(container)
+
+    </script>
+</body>
+
+</html>
